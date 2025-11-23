@@ -116,27 +116,28 @@ def pregunta_01():
     create_visual_for_mode_of_shipment(df)
     create_visual_for_average_customer_rating(df)
     create_visual_for_weight_distribution(df)
-notebook_dir = os.getcwd()
-parent_dir = os.path.dirname(notebook_dir)
-docs_dir = os.path.join(parent_dir, "docs")
+    notebook_dir = os.getcwd()
+    parent_dir = os.path.dirname(notebook_dir)
+    docs_dir = os.path.join(parent_dir, "docs")
 
-output_path = os.path.join(docs_dir, "index.html")
+    output_path = os.path.join(docs_dir, "index.html")
 
-html_content = """
-    <!DOCTYPE html>
-    <html>
-        <body>
-            <h1>Shipping Dashboard Example</h1>
-            <div style="width:45%; float:left">
-                <img src="shipping_per_warehouse.png" alt="Fig 1">
-                <img src="mode_of_shipment.png" alt="Fig 2">
-            </div>
-            <div style="width:45%; float:left">
-                <img src="average_customer_rating.png" alt="Fig 3">
-                <img src="weight_distribution.png" alt="Fig 4">
-            </div>
-        </body>
-    </html> """
+    html_content = """
+        <!DOCTYPE html>
+        <html>
+            <body>
+                <h1>Shipping Dashboard Example</h1>
+                <div style="width:45%; float:left">
+                    <img src="shipping_per_warehouse.png" alt="Fig 1">
+                    <img src="mode_of_shipment.png" alt="Fig 2">
+                </div>
+                <div style="width:45%; float:left">
+                    <img src="average_customer_rating.png" alt="Fig 3">
+                    <img src="weight_distribution.png" alt="Fig 4">
+                </div>
+            </body>
+        </html> """
 
-with open(output_path, "w") as f:
-    f.write(html_content)
+    #with open(output_path, "w") as f:
+    with open("docs/index.html", "w") as f:
+        f.write(html_content)
